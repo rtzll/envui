@@ -104,7 +104,7 @@ func (a *appState) layout() tview.Primitive {
 	if a.searchMode {
 		top = a.input
 	}
-	inst := "[y]ank  [s]earch  [q]uit"
+	inst := "[y]ank  [/]search  [q]uit"
 	footer := tview.NewFlex().
 		AddItem(a.status, 0, 1, false).
 		AddItem(tview.NewTextView().SetText(inst), len(inst)+1, 0, false)
@@ -137,7 +137,7 @@ func (a *appState) run() error {
 		switch {
 		case r == 'q' || k == tcell.KeyCtrlC:
 			a.app.Stop()
-		case r == 's':
+		case r == '/':
 			a.searchMode = true
 			a.input.SetText("")
 			a.filtered = a.entries

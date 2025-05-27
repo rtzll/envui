@@ -48,7 +48,7 @@ envui /path/to/.env
 
 ### Actions
 - `y`: Copy selected variable to clipboard
-- `s`: Enter search mode
+- `/`: Enter search mode
 - `q` / `Ctrl+C`: Quit
 
 ### Search Mode
