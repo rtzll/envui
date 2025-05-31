@@ -13,6 +13,8 @@ import (
 	"github.com/rivo/tview"
 )
 
+const version = "0.1.0"
+
 type appState struct {
 	app             *tview.Application
 	list            *tview.List
@@ -104,7 +106,7 @@ func (a *appState) layout() tview.Primitive {
 	if a.searchMode {
 		top = a.input
 	}
-	inst := "[y]ank  [/]search  [q]uit"
+	inst := fmt.Sprintf("[y]ank  [/]search  [q]uit  v%s", version)
 	footer := tview.NewFlex().
 		AddItem(a.status, 0, 1, false).
 		AddItem(tview.NewTextView().SetText(inst), len(inst)+1, 0, false)
