@@ -2,7 +2,7 @@
 
 A terminal user interface for viewing and copying environment variables.
 
->[!NOTE]
+> [!NOTE]
 > This is not the tool you want. Instead use `env | fzf | pbc` (read as "fuzzy find in env and copy match to clipboard").
 
 ## Motivation
@@ -43,15 +43,18 @@ envui /path/to/.env
 ## Keyboard Shortcuts
 
 ### Navigation
+
 - `j` / `↓`: Move down
 - `k` / `↑`: Move up
 
 ### Actions
+
 - `y`: Copy selected variable to clipboard
 - `/`: Enter search mode
 - `q` / `Ctrl+C`: Quit
 
 ### Search Mode
+
 - `Enter`: Accept search and exit search mode
 - `Esc`: Clear search and exit search mode
 - Type to filter variables in real-time
